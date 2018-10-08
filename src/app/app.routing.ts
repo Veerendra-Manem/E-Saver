@@ -4,8 +4,11 @@ import { AuthenticatedUserComponent } from './authenticated-user/authenticated-u
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CountryListComponent } from './country-list/country-list.component';
+import { ActivityListComponent } from './activity-list/activity-list.component';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { CountryMaintComponent } from './country-maint/country-maint.component';
+import { PledgeDetailComponent } from './pledge-detail/pledge-detail.component';
+import { PledgeMaintComponent } from './pledge-maint/pledge-maint.component';
 import { MetricsMeterComponent } from './metrics-meter/metrics-meter.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SignInComponent } from '../fw/users/sign-in/sign-in.component';
@@ -22,8 +25,11 @@ export const appRoutes: Routes = [
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
           { path: 'dashboard', component: DashboardComponent },
           { path: 'country-list/:count', component: CountryListComponent },
+          { path: 'activity-list/:count', component: ActivityListComponent },
           { path: 'country-detail/:id/:operation', component: CountryDetailComponent },
+          { path: 'pledge-detail/:id/:operation', component: PledgeDetailComponent },
           { path: 'country-maint', component: CountryMaintComponent },
+          { path: 'pledge-maint', component: PledgeMaintComponent },
           { path: 'metrics-meter', component: MetricsMeterComponent },
           { path: 'settings', component: SettingsComponent },
         ] }

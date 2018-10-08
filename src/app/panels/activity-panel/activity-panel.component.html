@@ -1,0 +1,40 @@
+
+<div class="item-name"><span>{{ date }}</span></div>
+
+<div *screenLarge class="group">       
+  <fw-panel *ngFor="let item of items; let i=index">     
+    <div> 
+      <div class="item-name">
+        <span>{{ item.epiIndex }}</span>
+      </div>         
+      <img class="item-image" [src]="'/assets/' + item.name + '.jpg'" [alt]="item.name">          
+      <div class="item-name" aria-orientation="horizontal">                  
+        <button class="btn btn-primary btn-space" (click)="incrementItem(item)">+</button>
+        <button class="btn btn-primary btn-space" (click)="decrementItem(item)">-</button>
+      </div>
+    </div>
+  </fw-panel>
+</div>  
+  
+
+<div *screenBelowLarge class="group-small">  
+    <fw-panel *ngFor="let item of items; let i=index">     
+      <div> 
+        <div class="item-name-small">
+          <span>{{ item.epiIndex }}</span>
+        </div>         
+        <img class="item-image-small" [src]="'/assets/' + item.name + '.jpg'" [alt]="item.name">          
+        <div class="item-name-small" aria-orientation="horizontal">                  
+          <button class="btn btn-primary btn-space" (click)="incrementItem(item)">+</button>
+          <button class="btn btn-primary btn-space" (click)="decrementItem(item)">-</button>
+        </div>
+      </div>
+    </fw-panel>        
+</div>
+
+<div class="item-name" aria-orientation="horizontal">
+    <button class="btn btn-primary btn-space">Confirm</button>  
+    <button class="btn btn-primary btn-space">Reset</button>
+</div>  
+
+

@@ -8,6 +8,25 @@ export let initialMenuItems: Array<MenuItem> = [
         submenu: null
     },
     {
+        text: 'Log Activity',
+        icon: 'glyphicon-calendarTearOff',
+        route: null,
+        submenu: [            
+            {
+                text: 'Today activity',
+                icon: 'glyphicon-dot',
+                route: 'authenticated/activity-list/0',
+                submenu: null
+            },
+            {
+                text: 'Log Missed Days',
+                icon: 'glyphicon-dot',
+                route: 'authenticated/activity-list/5',
+                submenu: null
+            }
+        ],
+    },
+    {
         text: 'Leadership',
         icon: 'glyphicon-flag',
         route: null,
@@ -40,7 +59,7 @@ export let initialMenuItems: Array<MenuItem> = [
             {
                 text: 'Pledge Maint',
                 icon: 'glyphicon-th-list',
-                route: 'authenticated/country-maint',
+                route: 'authenticated/pledge-maint',
                 submenu: null
             },
             {

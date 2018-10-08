@@ -1,0 +1,94 @@
+:host {
+    flex-grow: 1;
+}
+
+.group {
+    display: flex;
+    flex-grow: 2;
+    overflow: auto;
+    align-items: center;
+}
+
+.group-small {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-group-small {
+    display: flex;
+}
+
+.index {
+    display: flex;
+    width: 80px;
+    background-color: #555;
+    color: white;
+    font-size: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.index-small {
+    width: 50px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    font-size: 32px;
+}
+
+.item-image {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-space {    
+    margin: 2px;
+}
+
+.item-image-small {  
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-name {
+    display: flex;
+    flex-grow: 1;
+    font-size: 15px;
+    color: #555;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-name-small {
+    display: flex;
+    flex-grow: 1;
+    font-size: 15px;
+    color: #555;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.epi-index {
+    display: flex;
+    flex-grow: 1;
+    font-size: 25px;
+    width: 30px;
+    color: white;
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+}
+
+.epi-index-small {
+    font-size: 15px;
+    color: white;
+    background-color: green;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

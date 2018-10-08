@@ -1,0 +1,11 @@
+<h3>Pledge</h3>
+
+<fw-dynamic-form
+  [vm]="pledge"
+  [vmDefinition]="pledgeDefinition"
+  [operation]="operation"
+  [errorMessage]="errorMessage"
+  (update)="updatePledge($event)"
+  (create)="createPledge($event)"
+>
+</fw-dynamic-form>

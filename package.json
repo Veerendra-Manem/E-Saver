@@ -25,6 +25,7 @@
     "@angular/router": "^6.1.9",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "glyphicons": "^0.2.0",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.3.3",
     "ts-helpers": "^1.1.1",

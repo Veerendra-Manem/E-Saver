@@ -19,7 +19,11 @@ import { AuthGuard } from './services/auth-guard.service';
 import { AppDataService } from './services/app-data.service';
 import { CountryPanelComponent } from './panels/country-panel/country-panel.component';
 import { ImagePanelComponent } from './panels/image-panel/image-panel.component';
+import { ActivityPanelComponent } from './panels/activity-panel/activity-panel.component';
 import { MetricsMeterComponent } from './metrics-meter/metrics-meter.component';
+import { PledgeMaintComponent } from './pledge-maint/pledge-maint.component';
+import { PledgeDetailComponent } from './pledge-detail/pledge-detail.component';
+import { ActivityListComponent } from './activity-list/activity-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { MetricsMeterComponent } from './metrics-meter/metrics-meter.component';
     AuthenticatedUserComponent,
     CountryPanelComponent,
     ImagePanelComponent,
-    MetricsMeterComponent
+    MetricsMeterComponent,
+    ActivityPanelComponent,
+    PledgeMaintComponent,
+    PledgeDetailComponent,
+    ActivityListComponent
   ],
   imports: [
     BrowserModule,
