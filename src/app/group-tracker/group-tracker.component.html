@@ -1,0 +1,16 @@
+<fw-panel>
+    <div class="image-holder">
+      <div>          
+          <div [@photosAnimation]="items.length">
+              <div aria-orientation="horizontal" *ngFor="let item of items">            
+                  <img  class="item-image"  [src]="'/assets/' + item.name + '.jpg'"  >
+              </div>
+            </div>
+     </div>
+
+    <div class="title">
+      <span>Chueng Kong Center</span>
+    </div>
+    
+  </div>
+</fw-panel>

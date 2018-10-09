@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { AppDataService } from '../services/app-data.service';
-import { Item } from '../view-models/item';
 
 
 @Component({

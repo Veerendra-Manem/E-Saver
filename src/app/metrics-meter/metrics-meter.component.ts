@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppDataService } from '../services/app-data.service';
+import { Item } from '../view-models/item';
 
 @Component({
   selector: 'app-metrics-meter',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MetricsMeterComponent implements OnInit {
 
-  constructor() { }
+  items : Array<Item>;
+
+  constructor(private dataService: AppDataService) { 
+      dataService.getItems().subscribe((data) => this.items = data);
+    }
 
   ngOnInit() {
   }
 
+ 
 }

@@ -5,10 +5,15 @@
   <fw-panel *ngFor="let item of items; let i=index">     
     <div> 
       <div class="item-name">
-        <span>{{ item.epiIndex }}</span>
+        <span>{{ item.count }}</span>
       </div>         
-      <img class="item-image" [src]="'/assets/' + item.name + '.jpg'" [alt]="item.name">          
-      <div class="item-name" aria-orientation="horizontal">                  
+      <img class="item-image" [src]="'/assets/' + item.name + '.jpg'" [alt]="item.name">     
+      <div class="item-name" aria-orientation="horizontal">
+        <label>Pts :  </label>              
+        <label>{{ item.points }}</label>
+      </div>
+      <div class="item-name" aria-orientation="horizontal">
+                
         <button class="btn btn-primary btn-space" (click)="incrementItem(item)">+</button>
         <button class="btn btn-primary btn-space" (click)="decrementItem(item)">-</button>
       </div>
@@ -21,10 +26,14 @@
     <fw-panel *ngFor="let item of items; let i=index">     
       <div> 
         <div class="item-name-small">
-          <span>{{ item.epiIndex }}</span>
+          <span>{{ item.count }}</span>
         </div>         
         <img class="item-image-small" [src]="'/assets/' + item.name + '.jpg'" [alt]="item.name">          
-        <div class="item-name-small" aria-orientation="horizontal">                  
+        <div class="item-name" aria-orientation="horizontal">
+        <label>Pts :  </label>              
+        <label>{{ item.points }}</label>
+      </div>
+        <div class="item-name-small" aria-orientation="horizontal">                       
           <button class="btn btn-primary btn-space" (click)="incrementItem(item)">+</button>
           <button class="btn btn-primary btn-space" (click)="decrementItem(item)">-</button>
         </div>
@@ -33,6 +42,8 @@
 </div>
 
 <div class="item-name" aria-orientation="horizontal">
+    <label>Points :  </label>              
+    <label>{{ totalPoints }}</label>
     <button class="btn btn-primary btn-space">Confirm</button>  
     <button class="btn btn-primary btn-space">Reset</button>
 </div>  

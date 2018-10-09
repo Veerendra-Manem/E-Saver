@@ -37,16 +37,16 @@ export class AppDataService {
   ];
 
   private items : Array<Item> = [
-    { id: 1, name:"PlasticCup",  epiIndex: 0 },
-    { id: 2, name:"SoupCup", epiIndex: 0 },
-    { id: 3, name:"PaperCup", epiIndex: 0 },
-    { id: 4, name:"Chopsticks", epiIndex: 0 },
-    { id: 5, name:"Fork", epiIndex: 0 },
-    { id: 6, name:"Spoon", epiIndex: 0 },
-    { id: 7, name:"Knife", epiIndex: 0 },
-    { id: 8, name:"PlasticBag", epiIndex: 0 },
-    { id: 9, name:"TakeoutBox", epiIndex: 0 },
-    { id: 10, name:"UmbrellaCover", epiIndex: 0 }
+    { id: 1, name:"PlasticCup",  count: 0, points: 0, metric: 50  },
+    { id: 2, name:"SoupCup", count: 0, points: 0, metric: 40  },
+    { id: 3, name:"PaperCup", count: 0, points: 0, metric: 50  },
+    { id: 4, name:"Chopsticks", count: 0, points: 0, metric: 10  },
+    { id: 5, name:"Fork", count: 0, points: 0, metric: 10  },
+    { id: 6, name:"Spoon", count: 0, points: 0, metric: 10  },
+    { id: 7, name:"Knife", count: 0, points: 0, metric: 10  },
+    { id: 8, name:"PlasticBag", count: 0, points: 0, metric: 20  },
+    { id: 9, name:"TakeoutBox", count: 0, points: 0, metric: 30  },
+    { id: 10, name:"UmbrellaCover", count: 0, points: 0, metric: 20  }
   ];
 
   private missedDays : Array<String> = [

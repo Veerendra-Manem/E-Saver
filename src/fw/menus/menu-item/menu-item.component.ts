@@ -74,6 +74,7 @@ export class MenuItemComponent implements OnInit {
           this.el.nativeElement, 'dispatchEvent', [newEvent]);
 
       this.router.navigate(['/' + this.item.route]);
+      this.menuService.showingLeftSideMenu = false;
         
     }
   }

@@ -9,18 +9,18 @@ export let initialMenuItems: Array<MenuItem> = [
     },
     {
         text: 'Log Activity',
-        icon: 'glyphicon-calendarTearOff',
+        icon: 'glyphicon-cloud-upload',
         route: null,
         submenu: [            
             {
                 text: 'Today activity',
-                icon: 'glyphicon-dot',
+                icon: 'glyphicon-leaf',
                 route: 'authenticated/activity-list/0',
                 submenu: null
             },
             {
                 text: 'Log Missed Days',
-                icon: 'glyphicon-dot',
+                icon: 'glyphicon-tree-deciduous',
                 route: 'authenticated/activity-list/5',
                 submenu: null
             }
@@ -44,6 +44,31 @@ export let initialMenuItems: Array<MenuItem> = [
                 submenu: null
             }
         ],
+    },
+    {
+        text: 'Tracker Stats',
+        icon: 'glyphicon-stats',
+        route: null,
+        submenu: [            
+            {
+                text: 'Group Tracker',
+                icon: 'glyphicon-road',
+                route: 'authenticated/group-tracker',
+                submenu: null
+            },
+            {
+                text: 'Personal Tracker',
+                icon: 'glyphicon-star',
+                route: 'authenticated/personal-tracker',
+                submenu: null
+            }
+        ],
+    },
+    {
+        text: 'Profile',
+        icon: 'glyphicon-user',
+        route: 'authenticated/user-profile',
+        submenu: null
     },
     {
         text: 'Maintenance',

@@ -2,5 +2,7 @@
 export interface Item {
     id : number;
     name : string;
-    epiIndex : number;
+    count : number;
+    points : number;
+    metric : number;    
 }

@@ -15,10 +15,12 @@ export class ActivityPanelComponent implements OnInit {
   @Input() index = 1;
  
   items: Array<Item>;
+  totalPoints : number;
 
   constructor(private dataService: AppDataService) {}
 
 ngOnInit() {
+  this.totalPoints = 0;
 this.dataService.getItems().subscribe(
 items => {
   this.items = items;
@@ -27,12 +29,22 @@ items => {
 }
 
 incrementItem(item: Item) {
-  item.epiIndex = item.epiIndex + 1;
+  item.count = item.count + 1;
+  item.points = item.count * item.metric;
+  this.totalPoints = 0;
+  this.items.forEach(item => {
+    this.totalPoints = this.totalPoints + item.points;
+  });   
 }
 
 decrementItem(item: Item) {
-  var result = item.epiIndex - 1;
-  item.epiIndex = result < 0 ? 0 : item.epiIndex - 1;
+  var result = item.count - 1;
+  item.count = result <= 0 ? 0 : item.count - 1;
+  item.points = item.count * item.metric;
+  this.totalPoints = 0;
+  this.items.forEach(item => {
+    this.totalPoints = this.totalPoints + item.points;
+  });  
 }
 
 }

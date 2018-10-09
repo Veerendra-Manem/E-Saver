@@ -1,0 +1,27 @@
+
+.image-holder {
+    background-image: url(/assets/CKC.png);
+    background-position:  center center;
+    background-size: cover;    
+}
+
+span {
+    color: white;
+    font-size: 36px;
+}
+
+.title {
+    background-color: rgba(50,50,50,0.5);
+    text-align: center;
+}
+
+.country-image {
+    width: 800px;
+    margin: 14px;
+}
+
+.item-image {
+    height: 50px;
+    width: 50px;
+    margin: 14px;
+}

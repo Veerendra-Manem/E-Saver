@@ -24,6 +24,9 @@ import { MetricsMeterComponent } from './metrics-meter/metrics-meter.component';
 import { PledgeMaintComponent } from './pledge-maint/pledge-maint.component';
 import { PledgeDetailComponent } from './pledge-detail/pledge-detail.component';
 import { ActivityListComponent } from './activity-list/activity-list.component';
+import { GroupTrackerComponent } from './group-tracker/group-tracker.component';
+import { PersonalTrackerComponent } from './personal-tracker/personal-tracker.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { ActivityListComponent } from './activity-list/activity-list.component';
     ActivityPanelComponent,
     PledgeMaintComponent,
     PledgeDetailComponent,
-    ActivityListComponent
+    ActivityListComponent,
+    GroupTrackerComponent,
+    PersonalTrackerComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

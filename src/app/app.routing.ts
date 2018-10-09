@@ -14,6 +14,9 @@ import { SettingsComponent } from './settings/settings.component';
 import { SignInComponent } from '../fw/users/sign-in/sign-in.component';
 import { RegisterUserComponent } from '../fw/users/register-user/register-user.component';
 import { AuthGuard } from './services/auth-guard.service';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { GroupTrackerComponent } from './group-tracker/group-tracker.component';
+import { PersonalTrackerComponent } from './personal-tracker/personal-tracker.component';
 
 export const appRoutes: Routes = [  
   { path: 'signin', component: SignInComponent },
@@ -24,6 +27,9 @@ export const appRoutes: Routes = [
         children: [
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
           { path: 'dashboard', component: DashboardComponent },
+          { path: 'user-profile', component: UserProfileComponent },
+          { path: 'group-tracker', component: GroupTrackerComponent },
+          { path: 'personal-tracker', component: PersonalTrackerComponent },
           { path: 'country-list/:count', component: CountryListComponent },
           { path: 'activity-list/:count', component: ActivityListComponent },
           { path: 'country-detail/:id/:operation', component: CountryDetailComponent },
