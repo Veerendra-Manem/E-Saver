@@ -34,13 +34,13 @@ export let initialMenuItems: Array<MenuItem> = [
             {
                 text: 'Top 5',
                 icon: 'glyphicon-flag',
-                route: 'authenticated/country-list/5',
+                route: 'authenticated/user-list/5',
                 submenu: null
             },
             {
                 text: 'All',
                 icon: 'glyphicon-flag',
-                route: 'authenticated/country-list/0',
+                route: 'authenticated/user-list/0',
                 submenu: null
             }
         ],
@@ -59,7 +59,7 @@ export let initialMenuItems: Array<MenuItem> = [
             {
                 text: 'Personal Tracker',
                 icon: 'glyphicon-star',
-                route: 'authenticated/personal-tracker',
+                route: 'authenticated/personal-tracker/:id',
                 submenu: null
             }
         ],

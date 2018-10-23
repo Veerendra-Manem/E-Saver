@@ -1,0 +1,6 @@
+
+<fw-panel *ngFor="let user of users; let i=index">
+    <div class="projected-title">Rank</div>
+    <app-user-panel [user]="user" [index]="i+1">
+    </app-user-panel>
+  </fw-panel>

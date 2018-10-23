@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FrameworkConfigService } from '../services/framework-config.service';
 import { UserApi } from '../users/user-api';
+import { ApiService } from '../../app/services/api.service';
 
 @Component({
   selector: 'fw-top-bar',
@@ -10,10 +11,14 @@ import { UserApi } from '../users/user-api';
 })
 export class TopBarComponent implements OnInit {
 
+  userName
+
   constructor(private frameworkConfigService: FrameworkConfigService,
-              private userApi: UserApi) { }
+              private userApi: UserApi,
+              private apiService: ApiService) { }
 
   ngOnInit() {
+    this.apiService.getUserProfile().subscribe(data => this.userName = data.name)
   }
 
   signOut() {

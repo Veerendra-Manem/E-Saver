@@ -1,6 +1,6 @@
 
-<fw-panel *ngFor="let missedDay of items; let i=index">
+<fw-panel *ngFor="let post of posts; let i=index">
     <div class="projected-title">Log Activity</div>
-    <app-activity-panel [date]="missedDay" [index]="i+1">
+    <app-activity-panel [date]="post.date" [score]="post.score" [index]="i+1">
     </app-activity-panel>
   </fw-panel>

@@ -1,3 +1,15 @@
-<p>
-  Personal Tracker - Coming Soon !!!
-</p>
+<h3>Personal Tracker</h3>
+<table>
+  <thead>
+  <tr>
+    <th style="width: 150px">Date</th>
+    <th style="width: 50px">Score</th>    
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of posts">
+    <td>{{ row.date }}</td>
+    <td>{{ row.score }}</td>    
+  </tr>
+  </tbody>
+</table>

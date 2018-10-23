@@ -29,7 +29,7 @@
       </button>
     </td>
     <td *ngIf="row.id === deleteId && !isDeleting">
-      Delete this country?
+      Delete this Pledge?
       <button class="btn btn-sm" (click)="cancelDelete()">Cancel</button>
       <button class="btn btn-sm btn-danger" (click)="deletePledge(row.id)">Delete</button>
       <p *ngIf="deleteError">{{ deleteError }}</p>

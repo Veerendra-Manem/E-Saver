@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { UserService } from './user.service';
-import { Country } from '../view-models/country';
+import { User } from '../view-models/user';
 import { Pledge } from '../view-models/pledge';
 import { Item } from '../view-models/item';
 import { Observable, of } from 'rxjs';
@@ -9,17 +9,17 @@ import { Observable, of } from 'rxjs';
 @Injectable()
 export class AppDataService {
 
-  private countries : Array<Country> = [
-    { id: 1, name:"Peter",  epiIndex: 87.67 },
-    { id: 2, name:"Abby",   epiIndex: 83.29 },
-    { id: 3, name:"Kamila", epiIndex: 82.4 },
-    { id: 4, name:"Rochelle", epiIndex: 81.78 },
-    { id: 5, name:"Sumit", epiIndex: 81.47 },
-    { id: 6, name:"Masood", epiIndex: 80.47 },
-    { id: 7, name:"Bobby", epiIndex: 79.09 },
-    { id: 8, name:"Tim", epiIndex: 78.32 },
-    { id: 9, name:"Cecilia", epiIndex: 78.09 },
-    { id: 10, name:"Veer", epiIndex: 78.04 }
+  private users : Array<User> = [
+    { id: 1, name:"Peter",  score: 87.67 },
+    { id: 2, name:"Abby",   score: 83.29 },
+    { id: 3, name:"Kamila", score: 82.4 },
+    { id: 4, name:"Rochelle", score: 81.78 },
+    { id: 5, name:"Sumit", score: 81.47 },
+    { id: 6, name:"Masood", score: 80.47 },
+    { id: 7, name:"Bobby", score: 79.09 },
+    { id: 8, name:"Tim", score: 78.32 },
+    { id: 9, name:"Cecilia", score: 78.09 },
+    { id: 10, name:"Veer", score: 78.04 }
   ];
 
   private pledges : Array<Pledge> = [
@@ -60,24 +60,9 @@ export class AppDataService {
 
   constructor(private userService: UserService) {
   }
-
-  createCountry(vm: Country) : Observable<any> {
-    //return Observable.of({}).delay(2000).flatMap(x=>Observable.throw('Unable to create country'));
-    let id = 0;
-    this.countries.forEach(c => { if (c.id >= id) id = c.id+1 });
-    vm.id = id;
-    this.countries.push(vm);
-    return of(vm);
-  }
-
-  deleteCountry(id: number) : Observable<any> {
-    //return Observable.of({}).delay(2000).flatMap(x=>Observable.throw('Delete error.'));
-    return of({}).delay(2000)
-     .do(e => this.countries.splice(this.countries.findIndex(c => c.id == id), 1));
-  }
-
-  getCountries() : Observable<any> {
-    return of(this.countries);
+  
+  getUsers() : Observable<any> {
+    return of(this.users);
   }
 
   getMissedDays() : Observable<any> {
@@ -88,8 +73,7 @@ export class AppDataService {
     return of(this.items);
   }
 
-  createPledge(vm: Pledge) : Observable<any> {
-    //return Observable.of({}).delay(2000).flatMap(x=>Observable.throw('Unable to create country'));
+  createPledge(vm: Pledge) : Observable<any> {    
     let id = 0;
     this.pledges.forEach(c => { if (c.id >= id) id = c.id+1 });
     vm.id = id;
@@ -97,8 +81,7 @@ export class AppDataService {
     return of(vm);
   }
 
-  deletePledge(id: number) : Observable<any> {
-    //return Observable.of({}).delay(2000).flatMap(x=>Observable.throw('Delete error.'));
+  deletePledge(id: number) : Observable<any> {    
     return of({}).delay(2000)
      .do(e => this.pledges.splice(this.pledges.findIndex(c => c.id == id), 1));
   }
@@ -107,19 +90,12 @@ export class AppDataService {
     return of(this.pledges);
   }
 
-  getCountry(id: number) : Observable<Country> {
-    var country = this.countries.find(c => c.id == id);
-    return of(country);
-  }
+  getUser(id: number) : Observable<User> {
+    var user = this.users.find(c => c.id == id);
+    return of(user);
+  }  
 
-  updateCountry(updatedCountry: Country) : Observable<any> {
-    var country = this.countries.find(c => c.id == updatedCountry.id);
-    Object.assign(country, updatedCountry);
-    return of(country).delay(2000);
-    //return Observable.of({}).delay(2000).flatMap(x=>Observable.throw(''));
-  }
-
-  getPledge(id: number) : Observable<Country> {
+  getPledge(id: number) : Observable<Pledge> {
     var pledge = this.pledges.find(c => c.id == id);
     return of(pledge);
   }

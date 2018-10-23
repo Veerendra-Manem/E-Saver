@@ -1,7 +1,8 @@
 
 <div class="item-name"><span>{{ date }}</span></div>
 
-<div *screenLarge class="group">       
+<div *ngIf="!submitted">
+<div ng-show="notSubmitted" *screenLarge class="group">       
   <fw-panel *ngFor="let item of items; let i=index">     
     <div> 
       <div class="item-name">
@@ -22,7 +23,7 @@
 </div>  
   
 
-<div *screenBelowLarge class="group-small">  
+<div ng-show="notSubmitted" *screenBelowLarge class="group-small">  
     <fw-panel *ngFor="let item of items; let i=index">     
       <div> 
         <div class="item-name-small">
@@ -40,12 +41,18 @@
       </div>
     </fw-panel>        
 </div>
+</div>
 
 <div class="item-name" aria-orientation="horizontal">
     <label>Points :  </label>              
     <label>{{ totalPoints }}</label>
-    <button class="btn btn-primary btn-space">Confirm</button>  
-    <button class="btn btn-primary btn-space">Reset</button>
+    <div *ngIf="!submitted">
+      <button class="btn btn-primary btn-space" (click)=post()>Confirm</button>    
+      <button class="btn btn-primary btn-space" (click)=ngOnInit()>Reset</button>
+    </div>
+    <div *ngIf="submitted">        
+      <label>{{ status }}</label>
+    </div>     
 </div>  
 
 

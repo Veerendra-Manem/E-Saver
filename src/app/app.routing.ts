@@ -3,10 +3,8 @@ import { Routes } from '@angular/router';
 import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CountryListComponent } from './country-list/country-list.component';
+import { UserListComponent } from './user-list/user-list.component';
 import { ActivityListComponent } from './activity-list/activity-list.component';
-import { CountryDetailComponent } from './country-detail/country-detail.component';
-import { CountryMaintComponent } from './country-maint/country-maint.component';
 import { PledgeDetailComponent } from './pledge-detail/pledge-detail.component';
 import { PledgeMaintComponent } from './pledge-maint/pledge-maint.component';
 import { MetricsMeterComponent } from './metrics-meter/metrics-meter.component';
@@ -29,12 +27,10 @@ export const appRoutes: Routes = [
           { path: 'dashboard', component: DashboardComponent },
           { path: 'user-profile', component: UserProfileComponent },
           { path: 'group-tracker', component: GroupTrackerComponent },
-          { path: 'personal-tracker', component: PersonalTrackerComponent },
-          { path: 'country-list/:count', component: CountryListComponent },
-          { path: 'activity-list/:count', component: ActivityListComponent },
-          { path: 'country-detail/:id/:operation', component: CountryDetailComponent },
-          { path: 'pledge-detail/:id/:operation', component: PledgeDetailComponent },
-          { path: 'country-maint', component: CountryMaintComponent },
+          { path: 'personal-tracker/:id', component: PersonalTrackerComponent },
+          { path: 'user-list/:count', component: UserListComponent },
+          { path: 'activity-list/:count', component: ActivityListComponent },          
+          { path: 'pledge-detail/:id/:operation', component: PledgeDetailComponent },          
           { path: 'pledge-maint', component: PledgeMaintComponent },
           { path: 'metrics-meter', component: MetricsMeterComponent },
           { path: 'settings', component: SettingsComponent },

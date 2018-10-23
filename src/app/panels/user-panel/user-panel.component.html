@@ -1,0 +1,31 @@
+<div *screenLarge class="group">
+    <div class="index">
+      <span>{{ index }}</span>
+    </div>
+    <!-- <div>
+      <img class="user-image" [src]="'/assets/' + user.name + '.jpg'" [alt]="user.name">
+    </div> -->
+    <div class="user-name">
+      <span>{{ user.name }}</span>
+    </div>
+    <div class="score">
+      <span>{{ user.score }}</span>
+    </div>
+  </div>
+  <div *screenBelowLarge class="group-small">
+    <div class="title-group-small">
+      <div class="index-small">
+        <span>{{ index }}</span>
+      </div>
+      <div class="user-name-small">
+        <span>{{ user.name }}</span>
+      </div>
+    </div>
+    <!-- <div>
+      <img class="user-image-small" [src]="'/assets/' + user.name + '.jpg'" [alt]="user.name">
+    </div> -->
+    
+    <div class="score-small">
+      <span>{{ user.score }}</span>
+    </div>
+  </div>
