@@ -43,4 +43,8 @@ export class ApiService {
     getProfile(id) {
         return this.http.get(this.path + '/profile/' + id)
     }
+    
+    createPledge(pledge) {
+        return this.http.post(this.path + '/createpledge', pledge)
+    }
 }

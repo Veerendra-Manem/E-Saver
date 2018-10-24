@@ -4,16 +4,14 @@
   <thead>
   <tr>
     <th style="width: 25px">Id</th>
-    <th style="width: 500px">Pledge</th>
-    <th style="width: 70px">Pledged By</th>
+    <th style="width: 500px">Pledge</th>    
     <th style="min-width: 100px"></th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let row of pledges">
     <td>{{ row.id }}</td>
-    <td>{{ row.name }}</td>
-    <td>{{ row.epiIndex }}</td>
+    <td>{{ row.name }}</td>    
     <td *ngIf="row.id != deleteId">
       <button class="btn btn-sm btn-primary"
         (click)="showPledgeDetail(row.id)">

@@ -56,13 +56,13 @@ export class ActivityListComponent implements OnInit {
             lastDate.setDate(today.getDate() - i);
             var newpost;
             var postFound = false;
-            for(var p=0; p<data.length; p++) {          
-              if(data[p].date === lastDate.toDateString()) {
-                newpost = data[p];
-                postFound = true;
-                break;
-              }           
-            }
+            // for(var p=0; p<data.length; p++) {          
+            //   if(data[p].date === lastDate.toDateString()) {
+            //     newpost = data[p];
+            //     postFound = true;
+            //     break;
+            //   }           
+            // }
             if(!postFound) {
               newpost = {date: lastDate.toDateString(), score: 0, author: ""};
             }

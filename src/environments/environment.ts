@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  path: 'https://e-saver-node.herokuapp.com'
+  path: 'http://localhost:3000'
 };

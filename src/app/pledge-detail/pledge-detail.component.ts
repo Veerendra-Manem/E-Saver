@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router} from '@angular/router';
 
 import { AppDataService } from '../services/app-data.service';
+import { ApiService } from '../services/api.service';
+
 import { Pledge } from '../view-models/pledge';
 import { FieldDefinition } from '../../fw/dynamic-forms/field-definition';
 
@@ -25,13 +27,6 @@ export class PledgeDetailComponent implements OnInit {
       isId: false,
       label: 'Pledge',
       required: true
-    },
-    {
-      key: 'epiIndex',
-      type: 'number',
-      isId: false,
-      label: 'EPI Index',
-      required: true
     }
   ];
   errorMessage: string;
@@ -39,14 +34,19 @@ export class PledgeDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private router: Router, 
+              private apiService: ApiService,
               private dataService: AppDataService) { }
 
   createPledge(pledge: Pledge) {
-    pledge.id = 0;
+    pledge.id = new Date().getMilliseconds();
     this.errorMessage = null;
-    this.dataService.createPledge(pledge).subscribe(
-      c => this.router.navigate(['/authenticated/pledge-maint']),
-      err => this.errorMessage = 'Error creating pledge'
+    //this.dataService.createPledge(pledge).subscribe(
+    this.apiService.createPledge(pledge).subscribe(
+      c => this.router.navigate(['/authenticated/dashboard']),
+      err => {
+      console.log(err)
+      this.errorMessage = 'Error creating pledge'
+      }
       );
   }
 
@@ -54,7 +54,7 @@ export class PledgeDetailComponent implements OnInit {
     this.operation = this.route.snapshot.params['operation'];
 
     if (this.operation === 'create') {
-      this.pledge = { id: 0, name: "", epiIndex: null };
+      this.pledge = { id: new Date().getMilliseconds(), name: "" };
     }
     else
       this.dataService.getPledge(this.route.snapshot.params['id'])

@@ -4,4 +4,15 @@
       <span>Welcome to Environment Saver!</span>
     </div>
   </div>
+  <br/>
+  <div class="pledge-holder">
+    <div class="title">
+      <span>{{ pledge }}</span>
+    </div>
+  </div>
+  <br/>
+  <div aria-orientation="horizontal">
+    <button class="btn btn-primary" (click)="createPledge()">Add New Pledge</button>
+    <button class="btn btn-info right" (click)="logActivity()">Log Activity</button>
+  </div>
 </fw-panel>

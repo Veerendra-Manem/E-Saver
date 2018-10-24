@@ -23,16 +23,16 @@ export class UserListComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getUsers().subscribe(
-      users => {               
-        users.forEach(user => {
-          console.log(user)
-          this.apiService.getMessages(user._id).subscribe( posts => {
-            user.score = 0
-            posts.forEach(post => user.score = user.score + post.score)
-            });            
-        })
+       users => {               
+      //   users.forEach(user => {
+      //     console.log(user)
+      //     this.apiService.getMessages(user._id).subscribe( posts => {
+      //       user.score = 0
+      //       posts.forEach(post => user.score = user.score + post.score)
+      //       });            
+      //   })
 
-        this.allUsers = users.reverse(function(a, b){return b.score-a.score});; 
+        this.allUsers = users.sort(function(a, b){return b.score-a.score});; 
         this.count = this.route.snapshot.params['count'];
         this.updateList();
       }

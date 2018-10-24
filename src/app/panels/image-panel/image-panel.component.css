@@ -7,6 +7,14 @@
     height: 150px;
 }
 
+.pledge-holder {
+    flex-grow: 1;
+    background-image: url(/assets/Norway.jpg);
+    background-position:  center center;
+    background-size: cover;
+    height: 150px;
+}
+
 span {
     color: white;
     font-size: 36px;
@@ -15,4 +23,8 @@ span {
 .title {
     background-color: rgba(50,50,50,0.5);
     text-align: center;
+}
+
+button.btn-info {
+    float: right;
 }

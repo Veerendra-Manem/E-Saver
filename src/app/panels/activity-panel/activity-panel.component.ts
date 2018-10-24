@@ -44,7 +44,7 @@ export class ActivityPanelComponent implements OnInit {
       "score" : this.totalPoints});
 
       this.submitted = true;   
-      this.status = "-----Submitted"
+      this.status = ""
   }
 
 incrementItem(item: Item) {

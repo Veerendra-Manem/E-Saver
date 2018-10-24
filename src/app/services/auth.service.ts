@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment'
 export class AuthService {
 
     messages = []
-    path = environment.path
+    path = environment.path + "/auth"
 
     TOKEN_KEY = 'token'
 

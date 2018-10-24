@@ -11,21 +11,10 @@
     <div class="form-group">
       <input [(ngModel)]="registerData.pwd" class="form-control" name="password" type="password"  placeholder="Password"/>
     </div>    
-    <div class="form-group" style="width: 100" >      
-      <select ng-model="registerData.pwd">          
-          <option value="1">I will reduce the amount of one time use coffee cups I use</option>
-          <option value="2">I will reduce the amount of plastic utensils I use</option>
-          <option value="3">I will reduce the amount of takeout boxes I use</option>
-          <option value="4">I will reduce the amount of plastic bags I use</option>
-          <option value="5">I will recycle</option>
-          <option value="6">I will bring my own shopiing bag for groceries</option>
-          <option value="7">I will bring my own container for takeaways</option>
-          <option value="8">I will avoid single use plastics</option>
-          <option value="9">I will stop using plastic umbrella covers</option>
-          <option value="10">I will say no to plastic straws</option>
-          <option value="11">I will share the video 'SSSN' with my friends and family</option>
-        <!-- <option ng-repeat="pledge in availableOptions" value="{{ pledge.id }}">{{ pledge.name }}</option> -->
-      </select>      
+    <div class="form-group">      
+      <select class="form-control" name="pledge" placeholder="Pledge" [(ngModel)]="registerData.pledge">                    
+        <option *ngFor="let pledge of pledges" value="{{ pledge.name }}">{{ pledge.name }}</option>
+      </select>       
     </div>
     <div *ngIf="formError" class="alert alert-danger">
       {{ formError }}

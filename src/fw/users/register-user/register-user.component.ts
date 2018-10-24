@@ -14,7 +14,7 @@ import { Pledge } from 'app/view-models/pledge';
 export class RegisterUserComponent implements OnInit {
 
   formError: string;
-  registerData = {};
+  registerData = {score:0,name:"",email:"",pwd:"",pledge:""};
   pledges: Array<Pledge>;
 
   availableOptions: [
@@ -30,7 +30,7 @@ export class RegisterUserComponent implements OnInit {
      }
 
   ngOnInit() {
-    this.dataService.getPledges().subscribe((data) => this.pledges = data);
+    this.dataService.getPledges().subscribe((data) => this.pledges = data);    
   }
 
   register() {

@@ -23,17 +23,17 @@ export class AppDataService {
   ];
 
   private pledges : Array<Pledge> = [
-    { id: 1, name:"I will reduce the amount of one time use coffee cups I use",  epiIndex: 50 },
-    { id: 2, name:"I will reduce the amount of plastic utensils I use",   epiIndex: 40 },
-    { id: 3, name:"I will reduce the amount of takeout boxes I use", epiIndex: 60 },
-    { id: 4, name:"I will reduce the amount of plastic bags I use", epiIndex: 45 },
-    { id: 5, name:"I will recycle", epiIndex: 30 },
-    { id: 6, name:"I will bring my own shopiing bag for groceries", epiIndex: 40 },
-    { id: 7, name:"I will bring my own container for takeaways", epiIndex: 50 },
-    { id: 8, name:"I will avoid single use plastics", epiIndex: 15 },
-    { id: 9, name:"I will stop using plastic umbrella covers", epiIndex: 25 },
-    { id: 10, name:"I will say no to plastic straws", epiIndex: 33 },
-    { id: 11, name:"I will share the video \"Start Small, Start Now: HK\'s Plastic Story\" with my friends and family", epiIndex: 40 }
+    { id: 5, name:"I will recycle"},
+    { id: 10, name:"I will say no to plastic straws"},
+    { id: 8, name:"I will avoid single use plastics"},
+    { id: 9, name:"I will stop using plastic umbrella covers"},
+    { id: 7, name:"I will bring my own container for takeaways"},
+    { id: 6, name:"I will bring my own shopiing bag for groceries"},
+    { id: 4, name:"I will reduce the amount of plastic bags I use"},
+    { id: 3, name:"I will reduce the amount of takeout boxes I use"},
+    { id: 2, name:"I will reduce the amount of plastic utensils I use"},    
+    { id: 1, name:"I will reduce the amount of one time use coffee cups I use"},   
+    { id: 11, name:"I will share the video \"Start Small, Start Now: HK\'s Plastic Story\" with my friends and family"}
   ];
 
   private items : Array<Item> = [
